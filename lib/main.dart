@@ -41,13 +41,28 @@ class HomePage extends StatelessWidget {
                   flex: 2,
                   child: Container(
                     color: Colors.white,
-                    alignment: Alignment.center,
-                    child: const Text(
-                      "Добро пожаловать! Вы можете:",
-                      style: TextStyle(
-                        fontSize: 80,
-                      ),
-                  ),
+                    child: const Column(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            "Добро пожаловать!",
+                            style: TextStyle(
+                              fontSize: 80,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            "Вы можете:",
+                            style: TextStyle(
+                              fontSize: 80,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
               ),
               Expanded(
@@ -72,7 +87,7 @@ class HomePage extends StatelessWidget {
                       child: const Text(
                         "авторизоваться",
                         style: TextStyle(
-                          fontSize: 50,
+                          fontSize: 40,
                         ),
                       ),
                     ),
@@ -86,7 +101,7 @@ class HomePage extends StatelessWidget {
                           child: const Text(
                             "или",
                             style: TextStyle(
-                              fontSize: 50,
+                              fontSize: 40,
                             ),
                           ),
                         ),
@@ -107,7 +122,7 @@ class HomePage extends StatelessWidget {
                             child: const Text(
                               "зарегистрироваться",
                               style: TextStyle(
-                                fontSize: 50,
+                                fontSize: 40,
                               ),
                             ),
                           ),
