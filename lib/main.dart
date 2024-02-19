@@ -22,8 +22,125 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      AppBar:
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+        "Приложение для авторизации и регистрации",
+          style: TextStyle(
+            fontSize: 30,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.grey,
+      ),
+          body: Container(
+            color: Colors.white,
+    child: Column(
+            children: [
+              Expanded(
+                  flex: 2,
+                  child: Container(
+                    color: Colors.white,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Добро пожаловать! Вы можете:",
+                      style: TextStyle(
+                        fontSize: 80,
+                      ),
+                  ),
+                  ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  color: Colors.white,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                    color: Colors.white,
+                    alignment: Alignment.topCenter,
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Login()
+                        ),
+                        );
+                      },
+                      child: const Text(
+                        "авторизоваться",
+                        style: TextStyle(
+                          fontSize: 50,
+                        ),
+                      ),
+                    ),
+                  ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Container(
+                          alignment: Alignment.topCenter,
+                          color: Colors.white,
+                          child: const Text(
+                            "или",
+                            style: TextStyle(
+                              fontSize: 50,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                          alignment: Alignment.topCenter,
+                          color: Colors.white,
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const SignUp()
+                                ),
+                              );
+                            },
+                            child: const Text(
+                              "зарегистрироваться",
+                              style: TextStyle(
+                                fontSize: 50,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          ),
     );
   }
 }
+
+class Login extends StatelessWidget {
+  const Login({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+
+    );
+  }
+}
+
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
