@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:login/components/text_form_field.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    List<String> arrayText = ['Введите электронную почту по форме: you@email.com'];
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -48,11 +50,8 @@ class Login extends StatelessWidget {
               flex: 2,
               child: Container(
                 alignment: Alignment.topCenter,
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Введите электронную почту по форме: you@email.com',
-                  ),
+                child: const TextFormFieldSample(
+                  txt: '',
                 ),
               ),
             ),

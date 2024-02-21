@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
-class TextFormField extends StatelessWidget {
-  const TextFormField({Key? key}) : super(key: key);
+class TextFormFieldSample extends StatelessWidget {
+  final String txt;
+  const TextFormFieldSample({Key? key, required this.txt}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      
+    return TextFormField(
+        decoration: const InputDecoration(
+          border: UnderlineInputBorder(),
+          labelText: '',
+        ),
     );
   }
 }
