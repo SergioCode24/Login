@@ -7,10 +7,14 @@ class TextFormFieldSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-        decoration: const InputDecoration(
-          border: UnderlineInputBorder(),
-          labelText: '',
+    //  textAlign: TextAlign.center,
+      decoration: InputDecoration(
+        labelText: txt,
+        //prefixIcon: const Icon(Icons.email), //vpn_key
+        labelStyle: const TextStyle(
+          color: Colors.black,
         ),
+      ),
     );
   }
 }
